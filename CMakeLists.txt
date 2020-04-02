@@ -1,6 +1,10 @@
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.12)
 set(CMAKE_CXX_STANDARD 17)
 
 project (baseball)
 
-add_executable(baseball Main.cpp)
+set(SOURCES Main.cpp Player.cpp Team.cpp Game.cpp)
+list(TRANSFORM SOURCES PREPEND "src/")
+
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_include_directories(${PROJECT_NAME} PUBLIC include)
