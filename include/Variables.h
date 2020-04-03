@@ -9,5 +9,6 @@ struct VARIABLES {
     static int const players = 9;
     static int const innings = 9;
     static int const max_innings = 25;
+    static int const bases = 4;
 };
 #endif //BASEBALL_VARIABLES_H

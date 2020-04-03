@@ -1,16 +1,8 @@
-#include "time.h"
-#include<iostream>
-#include <utility>
-#include <vector>
-
 #include "Team.h"
 #include "Game.h"
 #include "IO.h"
 
 int main(int argc, char *argv[]){
-
-  srand(time(NULL));
-
   Team home_team("PUC");
   Team away_team("Becrews");
 

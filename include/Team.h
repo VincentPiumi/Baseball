@@ -9,13 +9,12 @@
 class Team {
 
 public:
-    Team(std::string name);
+    explicit Team(std::string name);
 
     void add_player(const Player& p);
     void add_player(const std::string& name, const int& position, const int& order);
 
     std::string name();
-    TeamStatus status();
 
 private:
     std::string t_name;
