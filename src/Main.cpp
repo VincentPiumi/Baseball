@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
   Game game("0", home_team, away_team);
   game.play();
 
-  GAME_WINNER(game);
-  GAME_SCORELINE(game);
+  Game_Winner(game);
+  Game_Scoreline(game);
   return 0;
 }

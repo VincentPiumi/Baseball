@@ -6,11 +6,11 @@
 #include "Variables.h"
 
 Team::Team(std::string name) : t_name(std::move(name)) {
-  t_players.reserve(VARIABLES::players); // VARIABLE
+  t_players.reserve(CONST::players); // VARIABLE
 }
 
 void Team::add_player(const Player& p) {
-  if (t_players.size() < VARIABLES::players) {
+  if (t_players.size() < CONST::players) {
     t_players.push_back(p);
   } else {
     std::cout << "Already enough players on the lineup" << std::endl;

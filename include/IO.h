@@ -3,7 +3,10 @@
 
 #include <iostream>
 
-struct IO {
+#include "Singleton.h"
+
+class IO : public Singleton<IO> {
+public:
     static void scoreline(Game game) {
       std::cout << game.away_team().team().name() << " ";
       for (int point : game.away_team().score_by_inning()) {
@@ -21,7 +24,7 @@ struct IO {
     }
 };
 
-#define GAME_SCORELINE(GAME) IO::scoreline(GAME)
-#define GAME_WINNER(GAME) IO::winner(GAME)
+#define Game_Scoreline(GAME) IO::instance().scoreline(GAME)
+#define Game_Winner(GAME) IO::instance().winner(GAME)
 
 #endif //BASEBALL_IO_H

@@ -21,7 +21,7 @@ void Game::play() {
   }
 }
 
-bool Game::over() { return g_inning >= VARIABLES::innings && g_home_team.current_score(g_inning) != g_away_team.current_score(g_inning); }
+bool Game::over() { return g_inning >= CONST::innings && g_home_team.current_score(g_inning) != g_away_team.current_score(g_inning); }
 Team Game::winner() { return g_home_team.final_score() > g_away_team.final_score() ? g_home_team.team() : g_away_team.team(); }
 
 void Game::update_inning() { g_inning++; }

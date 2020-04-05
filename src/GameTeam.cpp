@@ -6,6 +6,15 @@
 
 GameTeam::GameTeam(Team & team, TeamStatus status) : gt_team(team), gt_status(status) {}
 
+GameTeam& GameTeam::operator=(GameTeam other) {
+  if(&other == this)
+    return *this;
+  gt_score_by_inning = other.gt_score_by_inning;
+  gt_status = other.status();
+  gt_team = other.team();
+  return *this;
+}
+
 Team GameTeam::team() {return gt_team; }
 TeamStatus GameTeam::status() {return gt_status; }
 

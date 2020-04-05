@@ -8,6 +8,7 @@ class GameTeam {
 
 public:
     GameTeam(Team & team, TeamStatus status);
+    GameTeam& operator=(GameTeam other);
 
     Team team();
     TeamStatus status();
